@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ <link rel="stylesheet" href="style.css">
+<body>
+    <h3 class="title"> String Comparator</h>
+        <div id="text-areacontainer">
+             <textarea  id="text1" placeholder=" enter here String" onkeyup="checkTxt()"></textarea>
+             <textarea  id="text2" placeholder="enter here String" onkeyup="checkTxt()" ></textarea>
+        </div>
+        
+        <span id="ans"></span>
+   
+        <script>
+             
+              let text1 = document.getElementById("text1")
+              let text2 = document.getElementById("text2")
+              let answer =  document.getElementById("ans")
+                 
+                 function checkTxt(){
+                   
+                   if(text1.value === text2.value){
+                        answer.innerText = "Match..."
+                        answer.style.color="#04f929"
+                        text1.style.borderBottom=" 7px solid #04f929"
+                        text2.style.borderBottom=" 7px solid #04f929"
+                   }else{   
+                        answer.innerText = " Not match..."
+                        answer.style.color="#ff6347"
+                        text1.style.borderBottom=" 7px solid #ff6347"
+                        text2.style.borderBottom=" 7px solid #ff6347"
+                   }
+   
+                 }
+   
+        </script>
+</body>
+</html>
